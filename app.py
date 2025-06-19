@@ -18,7 +18,7 @@ st.set_page_config(page_title="FVPS Inventory System", layout="wide")
 st.title("📋 FVPS Inventory System")
 st.markdown("Live data loaded from GitHub Excel file.")
 
-df = pd.read_excel("invsys/data.xlsx")
+df = pd.read_excel("data.xlsx")
 
 if not df.empty:
     st.dataframe(df, use_container_width=True)
