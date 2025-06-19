@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 # Load Excel file from GitHub
-EXCEL_URL = "https://raw.githubusercontent.com/fvpsict/invsys/main/data.xlsx"
+EXCEL_URL = "invsys/data.xlsx"
 
 @st.cache_data
 def load_data():
