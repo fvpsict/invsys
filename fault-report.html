@@ -5,6 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FVPS ICT Inventory Microsite - Fault Report</title>
   <link href="styles.css" rel="stylesheet" />
+  <style>
+    /* Ensure iframe fills the content area nicely */
+    .iframe-container {
+      position: relative;
+      width: 100%;
+      height: 90vh; /* 90% viewport height */
+      overflow: hidden;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+    iframe {
+      position: absolute;
+      top:0; left:0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -20,9 +39,17 @@
   <main>
     <h1>Fault Report App</h1>
     <p class="description">
-      Click the button below to open the Fault Report Streamlit app.
+      Below is the embedded Fault Report Streamlit app:
     </p>
-    <a href="https://invsys-jweg2rqwtatcpcyg5yzn5s.streamlit.app/" target="_blank" rel="noopener" class="btn-link">Open Fault Report App</a>
+
+    <div class="iframe-container">
+      <iframe
+        src="https://invsys-jweg2rqwtatcpcyg5yzn5s.streamlit.app/"
+        allowfullscreen
+        title="Fault Report Streamlit App"
+        loading="lazy"
+      ></iframe>
+    </div>
   </main>
 </body>
 </html>
