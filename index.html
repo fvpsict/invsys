@@ -1,47 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-category="Home">
 <head>
   <meta charset="UTF-8" />
-  <title>FVPS ICT Microsite</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <title>FVPS Inventory System - Home</title>
   <link href="styles.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">FVPS Inventory</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">FVPS Inventory System</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#nav"
+        aria-controls="nav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navLinks">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="view-inventory/index.html">View Inventory</a></li>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="inventory.html">Inventory</a></li>
           <li class="nav-item"><a class="nav-link" href="fault-report.html">Fault Report</a></li>
-          <li class="nav-item"><a class="nav-link" href="patching/patching-report.html">Patching</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://share.streamlit.io/fvpsict/invsys/main/app.py" target="_blank">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="patching-report.html">Patching Report</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
- <main class="container mt-5 pt-4 text-center">
-    <h1 class="mb-4">Welcome to the FVPS Inventory System</h1>
-    <div class="d-grid gap-3 col-6 mx-auto">
-      <a href="view-inventory/index.html" class="btn btn-primary btn-lg">View Inventory</a>
-      <a href="fault-report.html" class="btn btn-danger btn-lg">Fault Report</a>
-      <a href="patching/patching-report.html" class="btn btn-warning btn-lg">Patching Report</a>
-    </div>
+  <main class="container mt-5 pt-4">
+    <h1>Welcome to the FVPS Inventory System</h1>
+    <p>This microsite provides quick access to inventory management, fault reporting, and patching reports.</p>
+    <p>Use the navigation menu above to visit different sections.</p>
   </main>
-
-  <!-- Footer -->
-  <footer class="text-center mt-5 py-4 bg-light">
-    <p class="mb-0">&copy; 2025 FVPS ICT Department</p>
-  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
