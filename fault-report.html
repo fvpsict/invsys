@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fault Report - FVPS Inventory System</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #343a40;
+      padding: 1rem;
+      color: white;
+    }
+
+    nav a {
+      color: white;
+      margin-right: 15px;
+      text-decoration: none;
+    }
+
+    iframe {
+      border: none;
+      width: 100%;
+      height: 90vh;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="view-inventory/index.html">View Inventory</a>
+    <a href="fault-report.html" class="active">Fault Report</a>
+    <a href="patching/patching-report.html">Patching Report</a>
+  </nav>
+
+  <!-- Embedded Streamlit App -->
+  <iframe src="https://invsys-jweg2rqwtatcpcyg5yzn5s.streamlit.app/" title="Fault Report App"></iframe>
+
+</body>
+</html>
 
