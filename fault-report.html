@@ -1,52 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FVPS ICT Inventory Microsite - Fault Report</title>
+  <title>Fault Report - FVPS Inventory System</title>
   <link href="styles.css" rel="stylesheet" />
-  <style>
-    /* Ensure iframe fills the content area nicely */
-    .iframe-container {
-      position: relative;
-      width: 100%;
-      height: 90vh; /* 90% viewport height */
-      overflow: hidden;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.1);
-    }
-    iframe {
-      position: absolute;
-      top:0; left:0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-  </style>
 </head>
 <body>
-  <nav>
-    <div class="brand">FVPS ICT Inventory Microsite</div>
-    <ul>
-      <li><a href="inventory.html">Inventory</a></li>
-      <li><a href="fault-report.html" class="active">Fault Report</a></li>
-      <li><a href="patching-report.html">Patching Report</a></li>
-      <li><a href="index.html">Home</a></li>
-    </ul>
+  <nav class="navbar">
+    <a href="index.html" class="navbar-brand">FVPS Inventory System</a>
   </nav>
 
-  <main>
-    <h1>Fault Report App</h1>
-    <p class="description">
-      Below is the embedded Fault Report Streamlit app:
-    </p>
-
+  <main class="iframe-main">
     <div class="iframe-container">
       <iframe
-        src="https://invsys-jweg2rqwtatcpcyg5yzn5s.streamlit.app/"
-        allowfullscreen
+        src="https://invsys-jweg2rqwtatcpcyg5yzn5s.streamlit.app/?embed_options=show_toolbar,show_colored_line,show_padding"
         title="Fault Report Streamlit App"
+        allowfullscreen
         loading="lazy"
       ></iframe>
     </div>
