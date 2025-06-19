@@ -148,3 +148,47 @@ textarea.form-control {
 .gap-2 {
   gap: 0.5rem !important;
 }
+
+/* Navbar styling */
+.navbar {
+  background-color: #343a40;
+  color: white;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  height: 56px; /* fixed navbar height */
+  box-sizing: border-box;
+}
+
+.navbar-brand {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+/* Layout for iframe main container */
+.iframe-main {
+  height: calc(100vh - 56px); /* full viewport minus navbar height */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Iframe wrapper */
+.iframe-container {
+  position: relative;
+  flex-grow: 1;
+  width: 100%;
+}
+
+/* Full size iframe */
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
