@@ -3,157 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FVPS ICT Inventory Microsite</title>
-  <style>
-    /* Reset & base */
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-      background-color: #f9f9f9;
-      color: #212529;
-      padding-top: 56px; /* space for fixed navbar */
-    }
-    a {
-      color: #0d6efd;
-      text-decoration: none;
-    }
-    a:hover, a:focus {
-      text-decoration: underline;
-    }
-
-    /* Navbar */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: #343a40;
-      color: white;
-      display: flex;
-      align-items: center;
-      padding: 0 1rem;
-      height: 56px;
-      box-shadow: 0 2px 5px rgb(0 0 0 / 0.2);
-      z-index: 1000;
-    }
-    nav .brand {
-      font-weight: 700;
-      font-size: 1.25rem;
-      margin-right: 2rem;
-      user-select: none;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      margin: 0;
-      padding: 0;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    nav ul li {
-      user-select: none;
-    }
-    nav ul li a {
-      display: block;
-      padding: 0.5rem 0.75rem;
-      color: white;
-      border-radius: 4px;
-      transition: background-color 0.15s ease-in-out;
-    }
-    nav ul li a.active,
-    nav ul li a:hover,
-    nav ul li a:focus {
-      background-color: #0d6efd;
-      color: white;
-      outline: none;
-    }
-
-    /* Main content */
-    main {
-      max-width: 960px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    h1 {
-      font-weight: 700;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    p.description {
-      font-size: 1.125rem;
-      color: #555;
-      margin-bottom: 2rem;
-    }
-
-    /* Button style */
-    .btn-link {
-      display: inline-block;
-      margin: 0.25rem 0.5rem 0.5rem 0;
-      padding: 0.5rem 1rem;
-      background-color: #0d6efd;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      font-weight: 600;
-      cursor: pointer;
-      text-align: center;
-      text-decoration: none;
-      user-select: none;
-      transition: background-color 0.2s ease-in-out;
-    }
-    .btn-link:hover,
-    .btn-link:focus {
-      background-color: #084fc1;
-      outline: none;
-      text-decoration: none;
-    }
-
-    /* Responsive */
-    @media (max-width: 480px) {
-      nav {
-        flex-wrap: wrap;
-        height: auto;
-        padding: 0.5rem 1rem;
-      }
-      nav .brand {
-        flex-basis: 100%;
-        margin-bottom: 0.5rem;
-      }
-      nav ul {
-        justify-content: center;
-        gap: 0.5rem;
-      }
-      main {
-        margin: 1rem auto;
-      }
-    }
-  </style>
+  <title>FVPS ICT Inventory Microsite - Inventory</title>
+  <link href="styles.css" rel="stylesheet" />
 </head>
 <body>
   <nav>
     <div class="brand">FVPS ICT Inventory Microsite</div>
     <ul>
-      <li><a href="https://invsys-ipbztkgwkswvwcz7hskajv.streamlit.app/" target="_blank" rel="noopener" class="active">Inventory</a></li>
-      <li><a href="https://invsys-jweg2rqwtatcpcyg5yzn5s.streamlit.app/" target="_blank" rel="noopener">Fault Report</a></li>
-      <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vT8dXgl3cTXv04SMY1T5K0OugNh1veaPjVaCE619s1GPgobbExe6z4sL1J0_xk1oqkNQvEV8qx8gpT4/pubhtml?gid=0&single=true" target="_blank" rel="noopener">Patching Report</a></li>
+      <li><a href="inventory.html" class="active">Inventory</a></li>
+      <li><a href="fault-report.html">Fault Report</a></li>
+      <li><a href="patching-report.html">Patching Report</a></li>
+      <li><a href="index.html">Home</a></li>
     </ul>
   </nav>
 
   <main>
-    <h1>Welcome to FVPS ICT Inventory Microsite</h1>
+    <h1>Inventory Management App</h1>
     <p class="description">
-      Access your Inventory Management, Fault Reporting, and Patching Reports with the links above.
-      Each app or report opens in a new tab.
+      Click the button below to open the Inventory Streamlit app.
     </p>
-    <section>
-      <h2>Quick Links</h2>
-      <a href="https://invsys-ipbztkgwkswvwcz7hskajv.streamlit.app/" class="btn-link" target="_blank" rel="noopener">Inventory App</a>
-      <a href="https://invsys-jweg2rqwtatcpcyg5yzn5s.streamlit.app/" class="btn-link" target="_blank" rel="noopener">Fault Report App</a>
-      <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vT8dXgl3cTXv04SMY1T5K0OugNh1veaPjVaCE619s1GPgobbExe6z4sL1J0_xk1oqkNQvEV8qx8gpT4/pubhtml?gid=0&single=true" class="btn-link" target="_blank" rel="noopener">Patching Report</a>
-    </section>
+    <a href="https://invsys-ipbztkgwkswvwcz7hskajv.streamlit.app/" target="_blank" rel="noopener" class="btn-link">Open Inventory App</a>
   </main>
 </body>
 </html>
