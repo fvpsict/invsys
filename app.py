@@ -1,16 +1,26 @@
 import streamlit as st
 import pandas as pd
 
-# Link to raw Excel file on GitHub
+# Load Excel file from GitHub
 EXCEL_URL = "https://raw.githubusercontent.com/fvpsict/invsys/main/data.xlsx"
 
 @st.cache_data
 def load_data():
-    return pd.read_excel(EXCEL_URL)
+    try:
+        df = pd.read_excel(EXCEL_URL, engine='openpyxl')
+        return df
+    except Exception as e:
+        st.error(f"Error loading data: {e}")
+        return pd.DataFrame()
 
-st.title("📋 FVPS Inventory Viewer")
-st.write("Data loaded live from GitHub:")
+st.set_page_config(page_title="FVPS Inventory System", layout="wide")
+
+st.title("📋 FVPS Inventory System")
+st.markdown("Live data loaded from GitHub Excel file.")
 
 df = load_data()
-st.dataframe(df)
 
+if not df.empty:
+    st.dataframe(df, use_container_width=True)
+else:
+    st.warning("No data to display.")
