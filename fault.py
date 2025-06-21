@@ -1,7 +1,14 @@
 import streamlit as st
 import pandas as pd
 from datetime import date
+import json
 
+# Example: Load service credentials from secrets.toml
+if "google_sheets" in st.secrets:
+    st.sidebar.success("✅ Google Sheets credentials loaded")
+    google_creds = st.secrets["google_sheets"]
+
+# Set up app
 st.set_page_config(page_title="FVPS Fault Report", layout="wide")
 st.title("📋 FVPS Fault Report System")
 
@@ -14,7 +21,6 @@ if "fault_data" not in st.session_state:
 if "edit_index" not in st.session_state:
     st.session_state.edit_index = None
 
-# Clear input fields
 def reset_form_state():
     for key in [
         "equipment_type", "equipment", "asset_no", "serial_no",
@@ -23,10 +29,9 @@ def reset_form_state():
         if key in st.session_state:
             del st.session_state[key]
 
-# --- Fault Form ---
+# --- Form ---
 with st.form("fault_form"):
     st.subheader("Add New Fault Report" if st.session_state.edit_index is None else "Edit Fault Report")
-
     col1, col2, col3 = st.columns(3)
 
     options_equipment_type = [
